@@ -1,0 +1,4 @@
+<launch>
+  <node name="kinova_hand_follow" pkg="kinova_hand_follow" type="kinova_hand_follow_node" respawn="false" output="screen">
+  </node>
+</launch>
