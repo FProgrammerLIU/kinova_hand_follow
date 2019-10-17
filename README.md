@@ -1,2 +1,5 @@
 # kinova_hand_follow
 kinova moves with you hand
+此demo为kinova控制方式，包括直接使用API与使用kinova_ros的方式
+API的scripts包中，包括获得当前机械臂位姿，和笛卡尔位姿路径的连续规划（路径点被不断加入堆栈，所以可以实现实时的连续轨迹）
+kinova_ros包的方式，kinova_ros是在ros层对API的进一步封装，包中有使用action的方式，函数调用，与service的方式，其中action的方式在连续点中必然产生停顿，函数调用与driver不能同时启动，最好的方式是service的方式，它的callback调用了规划函数，在不与driver冲突的情况下实现了实时的连续轨迹
